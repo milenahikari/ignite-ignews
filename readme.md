@@ -7,6 +7,7 @@
 - [Sobre](#-sobre)
 - [Tecnologias utilizadas](#-tecnologias-utilizadas)
 - [Como baixar o projeto](#-como-baixar-o-projeto)
+- [Informação adicional do Stripe](#-informacao-adicional-do-stripe)
 - [Preview do projeto](#-preview-do-projeto)
 
 ---
@@ -53,6 +54,22 @@ Desenvolvemos a estrutura base da aplicação utilizando:
 
   #projeto sera executado no browser
   http://localhost:3000/
+```
+
+## 📋 Informação adicional do Stripe
+
+```bash
+  #baixar Stripe CLI: https://stripe.com/docs/stripe-cli#install
+
+  #no windows abrir o terminal na pasta do arquivo .exe
+  $ cd Downloads/stripe_1.5.12_windows_x86_64
+
+  # fazer login
+  $ stripe login
+
+  # deixar o Stripe ouvindo o webhook em ambiente de desenvolvimento
+  $ stripe listen --forward-to localhost:3000/api/webhooks
+  
 ```
 
 ---
