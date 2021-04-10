@@ -61,8 +61,11 @@ Desenvolvemos a estrutura base da aplicação utilizando:
 ```bash
   #baixar Stripe CLI: https://stripe.com/docs/stripe-cli#install
 
-  #no windows abrir o terminal na pasta do arquivo .exe
+  #no windows abrir o terminal cmd e localizar a pasta do arquivo .exe
   $ cd Downloads/stripe_1.5.12_windows_x86_64
+
+  #executar o arquivo .exe
+  $  start stripe.exe
 
   # fazer login
   $ stripe login
