@@ -1,4 +1,4 @@
-import { GetStaticProps } from "next";
+import { GetStaticPaths, GetStaticProps } from "next";
 import { useSession } from "next-auth/client";
 import Head from "next/head";
 import Link from "next/link";
@@ -54,10 +54,10 @@ export default function PostPreview({ post }: PostPreviewProps) {
   );
 }
 
-export const getStaticPaths = () => {
+export const getStaticPaths: GetStaticPaths = async () => {
   return {
-    paths: [],
-    fallback: 'blocking'
+    paths: [], //Em páginas dinâmicas, posso especificar os índices que quero carregar previamente no build, porém nesse projeto deixamos vazio, porque todos os post vão ser gerados estáticos conforme as pessoas vão acessando
+    fallback: 'blocking' // Quando tento acessar um conteúdo que ainda não foi gerado de forma estática, ele vai tentar esse conteúdo novo do lado do Next, executando ServerSideRendering   
   }
 }
 
@@ -82,6 +82,7 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
   return {
     props: {
       post
-    }
+    },
+    redirect: 60 * 30, // 30 minutes
   };
 }
