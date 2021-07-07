@@ -1,5 +1,5 @@
 <h1 align="center">
-  <img alt="Ignite" src="https://imgur.com/5OLkLod.png" width="100%">
+  <img alt="Ignite" src="https://imgur.com/5OLkLod.png" width="100%"/>
 </h1>
 
 ## 📕 Indice
